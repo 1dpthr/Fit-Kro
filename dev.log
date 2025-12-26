@@ -1,0 +1,17 @@
+nohup: ignoring input
+
+> Build Fit Kro Web App@0.1.0 dev
+> vite
+
+Port 3000 is in use, trying another one...
+
+  VITE v6.3.5  ready in 286 ms
+
+  ➜  Local:   http://localhost:3001/
+  ➜  Network: use --host to expose
+11:27:18 PM [vite] (client) hmr update /src/components/AuthScreen.tsx
+11:27:44 PM [vite] (client) hmr update /src/App.tsx
+11:27:56 PM [vite] (client) hmr update /src/App.tsx
+11:28:16 PM [vite] (client) hmr update /src/App.tsx
+11:28:40 PM [vite] (client) hmr update /src/App.tsx
+11:28:50 PM [vite] (client) hmr update /src/App.tsx
