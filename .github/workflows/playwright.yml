@@ -1,0 +1,31 @@
+name: Playwright E2E
+
+on:
+  pull_request:
+    branches: [ main, master ]
+  push:
+    branches: [ main, master ]
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install
+      - name: Run build
+        run: npm run build
+      - name: Serve build (static)
+        uses: crazy-max/serve-action@v4
+        with:
+          path: build
+          port: 5173
+          timeout: 120000
+      - name: Run Playwright tests
+        run: npx playwright test --project=chromium --reporter=list
