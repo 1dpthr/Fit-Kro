@@ -69,6 +69,6 @@
             "test:e2e:headed": "playwright test --headed",
             "test:e2e:report": "playwright show-report",
             "predeploy": "npm run build",
-            "deploy": "gh-pages -d build"
+            "deploy": "gh-pages -d dist"
       }
 }
